@@ -16,7 +16,7 @@ struct WaveAnimationView: View {
     
     var body: some View {
         VStack {
-            TimelineView(.animation) { context in
+            TimelineView(.animation) { _ in
                 Image(systemName: "cloud.circle.fill")
                     .font(.system(size: 300))
                     .wave(
@@ -48,13 +48,12 @@ struct SliderView: View {
     
     
     var body: some View {
-        VStack {
-            HStack {
+        VStack(alignment: .leading) {
+           
                 Text(animationName)
                     .font(.title)
                     .bold()
-                Spacer()
-            }
+          
             
             Slider(value: $value, in: 1...20)
         }

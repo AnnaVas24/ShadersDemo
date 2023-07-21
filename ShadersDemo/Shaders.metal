@@ -10,7 +10,7 @@
 using namespace metal;
 
 
-[[stitchable]] half4 magenta(float2 position, half4 color) {
+[[stitchable]] half4 magenta(float2 position, half4 currentColor) {
     return half4(199.0/255.0, 85.0/255.0, 212.0/255.0, 1.0);
 }
 

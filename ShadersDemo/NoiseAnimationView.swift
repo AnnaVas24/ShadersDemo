@@ -11,7 +11,7 @@ struct NoiseAnimationView: View {
     private let startDate = Date()
     
     var body: some View {
-        TimelineView(.animation) { context in
+        TimelineView(.animation) { _ in
             Image(systemName: "cloud.circle.fill")
                 .font(.system(size: 300))
                 .noise(seconds: startDate.timeIntervalSinceNow)

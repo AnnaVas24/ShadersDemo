@@ -27,17 +27,10 @@ extension View {
     }
     
     func gradientSubstract() -> some View {
-//        let function = ShaderFunction(library: .default, name: "gradientSubtract")
-//        let shader = Shader(function: function, arguments: [
-//            .boundingRect
-//            ]
-//        )
-//        return self.layerEffect(shader, maxSampleOffset: .zero)
-        
         self.layerEffect(
-                    ShaderLibrary.default.gradientSubtract(.boundingRect),
-                    maxSampleOffset: .zero
-                )
+            ShaderLibrary.default.gradientSubtract(.boundingRect),
+            maxSampleOffset: .zero
+        )
     }
     
     func wave(seconds: Double, speed: Double, frequency: Double, amplitude: Double) -> some View {
